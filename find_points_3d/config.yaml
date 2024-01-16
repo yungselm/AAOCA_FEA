@@ -1,0 +1,19 @@
+defaults:  
+  - _self_  
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+  
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .
+
+find_mesh_points:
+  contours_dir: "C:/WorkingData/Documents/2_Coding/Python/FEManalysis/Contours"
+  contours_dir_sys: "C:/WorkingData/Documents/2_Coding/Python/FEManalysis/Contours_systolic"
+  mesh_coords_file: "C:/WorkingData/Documents/2_Coding/Python/FEManalysis/dictionary.txt"
+  points_per_contour: 20
+
+analyse_simulation:
+  results_dir: "C:/WorkingData/Documents/2_Coding/Python/FEManalysis/results"
+  output_dir: "C:/WorkingData/Documents/2_Coding/Python/FEManalysis/analysis"
