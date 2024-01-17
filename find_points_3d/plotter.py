@@ -32,3 +32,20 @@ ax.set_ylabel('Youngs modulus [MPa]')
 ax.set_zlabel('Mean squared error')
 ax.legend()
 plt.show()
+
+# create a 2d plot for young's modulus == 3MPa with poisson ratio on the x-axis and mse on the y-axis
+# first filter the dataframe
+df_filtered = df[df["E_module"] == 3]
+# plot
+plt.plot(df_filtered["Poisson_ratio"], df_filtered["total_mse"])
+# fix y.axis from 0.55 to 1.85
+plt.xlabel("Poisson ratio")
+plt.ylabel("Mean squared error")
+plt.show()
+# now the same but filter for poisson ratio == 0.3
+df_filtered = df[df["Poisson_ratio"] == 0.3]
+# plot
+plt.plot(df_filtered["E_module"], df_filtered["total_mse"])
+plt.xlabel("Youngs modulus [MPa]")
+plt.ylabel("Mean squared error")
+plt.show()
